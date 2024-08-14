@@ -4,47 +4,7 @@ import { Loading } from "@/pages/misc/loading";
 import style from "./style.module.scss"
 import { createClient } from "microcms-js-sdk";
 import { ListTitle } from "@/components/parts/listTitle/ListTitle";
-
-type Tag = {
-    id: string
-    name: string
-}
-
-type Img = {
-    url: string,
-    height: number,
-    width: number
-}
-
-type Content = {
-    id: string
-    createdAt: string
-    updatedAt: string
-    publishedAt: string
-    revisedAt: string
-    title: string
-    category: ["画像" | "動画"]
-    thumbnail: Img
-    image: Img
-    created_date: string
-    creation_time: string
-    comment?: string
-    tags?: Tag[]
-}
-
-type Groups = {
-    id: string
-    createdAt: string
-    updatedAt: string
-    publishedAt: string
-    revisedAt: string
-    title: string
-    description?: string
-    items: Content[]
-    totalCount: number
-    offset: number
-    limit: number
-}
+import { Groups } from "../../../types/type";
 
 export const GalleryList=()=>{
     const [isLoading, setIsLoading] = useState(true)
