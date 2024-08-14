@@ -1,0 +1,80 @@
+@use "../../style/var.scss";
+
+.site-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var.$color-first;
+}
+
+.site-menu-container {
+    display: flex;
+    justify-content: right;
+
+    .site-menu {
+        display: inline-block;
+        margin: 0.5rem 0;
+
+        .menu-link {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .separator {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+    }
+
+    .active-site-menu {
+        display: inline-block;
+        margin: 0.5rem 0;
+
+        .menu-link {
+            font-weight: bold;
+            cursor: pointer;
+            color: var.$color-third;
+        }
+
+        .separator {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+    }
+}
+@media screen and (max-width: 960px){
+    .site-menu-container {
+        display: flex;
+        justify-content: center;
+
+        .site-menu {
+            display: inline-block;
+            margin: 0.5rem 0;
+
+            .menu-link {
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .separator {
+                display: inline-block;
+                margin: 0 1rem;
+            }
+        }
+
+        .active-site-menu {
+            display: inline-block;
+            margin: 0.5rem 0;
+
+            .menu-link {
+                font-weight: bold;
+                cursor: pointer;
+                color: var.$color-third;
+            }
+
+            .separator {
+                display: inline-block;
+                margin: 0 1rem;
+            }
+        }
+    }
+}

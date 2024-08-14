@@ -1,0 +1,54 @@
+@use "../../../src/style/var.scss";
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+.main{
+    animation: fadeIn 1s;
+    color: var.$color-second;
+    .logo {
+        max-width: 300px;
+        margin: 1rem;
+        display: inline-block;
+        animation: scaleDown 1s;
+        &:hover {
+            animation: scaleUp 1s;
+            scale: 1.1;
+        }
+    }
+
+    @keyframes scaleUp {
+        0% {
+            scale: 1
+        }
+        100% {
+            scale: 1.1
+        }
+    }
+
+    @keyframes scaleDown {
+        0% {
+            scale: 1.1
+        }
+        100% {
+            scale: 1.0
+        }
+    }
+
+    .mail {
+        a {
+            color: var.$color-first;
+            text-decoration: none;
+            &:hover {
+                color: var.$color-third;
+                text-decoration: underline;
+            }
+        }
+    }
+}

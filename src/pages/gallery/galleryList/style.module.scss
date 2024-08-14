@@ -1,0 +1,84 @@
+@use "../../../style/var.scss";
+
+.page-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var.$color-first;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.no-article-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    color: var.$color-first;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.card{
+    animation: fadeIn 1s;
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 1rem;
+    .group-list-img {
+        height: 200px;
+        img {
+            object-fit: cover;
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .badge-list {
+        margin: 5px 0;
+        .badge {
+            margin-right: 10px;
+        }
+    }
+    .title {
+        font-size: 1.0rem;
+        font-weight: bold;
+        color: var.$color-first;
+    }
+    .title-text {
+        white-space: nowrap; // 文字列を一行に保持
+        overflow: hidden; // コンテンツがコンテナを超えた場合に非表示にする
+        text-overflow: ellipsis; // はみ出したテキストを省略記号で置き換える
+    }
+    .created-at{
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .card {
+        animation: fadeIn 1s;
+        position: relative;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        display: block;
+        width: 100%;
+        .group-list-img{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            object-fit: cover;
+            img: {
+                object-fit: cover;
+                width: 100%;
+                height: 10rem;
+            }
+        }
+    }
+}

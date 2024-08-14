@@ -1,0 +1,23 @@
+@use "../../../style/var.scss";
+
+.list-title{
+    margin: 0.5rem 0;
+    .s {
+        font-size: 0.8rem;
+    }
+    .m {
+        font-size: 1rem;
+    }
+    .l {
+        font-size: 1.3rem;
+    }
+
+    p {
+        color: var.$color-second;
+        border-left: solid 4px var.$color-third;
+        padding-left: 0.5rem;
+    }
+    .border {
+        border-bottom: solid 1px var.$color-third;
+    }
+}

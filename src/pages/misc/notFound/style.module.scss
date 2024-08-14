@@ -1,0 +1,24 @@
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.not-found-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.not-found-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.button {
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
