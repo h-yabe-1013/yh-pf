@@ -4,7 +4,6 @@ import style from "./style.module.scss"
 export const Contact=()=>{
     return(
         <div className={style.main}>
-            <ListTitle text="Contact" size="l" />
             <p>↓お仕事のご依頼はこちらから↓</p>
             <div className={style.logo}>
                 <a href="https://coconala.com/">

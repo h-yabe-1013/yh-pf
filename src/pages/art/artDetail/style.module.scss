@@ -45,17 +45,17 @@
         max-height: 80vh;
     }
     .imgs{
-        .img-list {
+        .img-box {
+            position: relative;
             display: inline-block;
             padding: 1rem;
-            .thumbnail {
+            max-width: 100%;
+            background-color: var.$color-forth;
+            .img {
                 display: inline-block;
                 margin: 0.5rem;
-                width: 200px;
-                height: 200px;
-                object-fit: cover;
+                max-width: 200px;
                 box-shadow: 7px 9px 15px -10px #777777;
-                border-radius: 10px;
             }
             .dialog-img {
                 img {
@@ -64,15 +64,14 @@
             }
         }
         @media screen and (max-width: 960px){
-            .img-list{
+            .img-box{
                 display: grid;
-                
-                .thumbnail {
+                background-color: block;
+                max-width: 140px;
+                .img {
                     display: inline-block;
                     margin: 0.5rem;
-                    width: 130px;
-                    height: 130px;
-                    object-fit: cover;
+                    max-width: 130px;
                     box-shadow: 7px 9px 15px -10px #777777;
                     border-radius: 10px;
                 }

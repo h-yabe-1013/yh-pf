@@ -5,6 +5,7 @@ import { Contact } from "./pages/contact";
 import { NotFound } from "./pages/misc/notFound";
 import { Header } from "./components/layout/Header";
 import './App.css';
+import { ArtDetail } from "./pages/art/artDetail";
 
 function Router() {
 
@@ -17,6 +18,8 @@ function Router() {
             <Route path="/" element={<GalleryList />} />
             <Route path="/gallery" element={<GalleryList />} />
             <Route path="/gallery/:id" element={<GalleryDetail />} />
+            <Route path="/art" element={<ArtDetail />} />
+            <Route path="/art/:id" element={<ArtDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
