@@ -1,16 +1,32 @@
-import { SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./style.module.scss"
 import { createClient } from "microcms-js-sdk";
 import { Link, useParams } from "react-router-dom";
 import { ListTitle } from "@/components/parts/listTitle/ListTitle";
 import { Groups } from "../../../types/type";
-import { Card, CardContent } from "@/components/ui/card"
+// import { Card, CardContent } from "@/components/ui/card"
+import { Loading } from "@/pages/misc/loading";
 
 export const GalleryDetail = () => {
-    const [group, setGroup] = useState<Groups>()
+    const [group, setGroup] = useState<Groups>(
+        {
+            id: "",
+            createdAt: "",
+            updatedAt: "",
+            publishedAt: "",
+            revisedAt: "",
+            title: "",
+            description: "",
+            items: [],
+            totalCount: 0,
+            offset: 0,
+            limit: 0
+        }
+    )
     const [isLoading, setIsLoading] = useState(true)
     const [isPreviewOpen, setIsPreviewOpen] = useState(false)
-    const [selectingIndex, setSelectingIndex] = useState(0)
+    // const [selectingIndex, setSelectingIndex] = useState(0)
+    const [selectingIndex] = useState(0)
 
     const {id} = useParams()
 
@@ -43,7 +59,7 @@ export const GalleryDetail = () => {
     return (
         ( isLoading ?
             <>
-                <p>...</p>
+                <Loading />
             </>
             :
             <>
@@ -60,8 +76,9 @@ export const GalleryDetail = () => {
                             <div className={style["img-list"]}>
                                 { group.items.map((item)=>{
                                     return (
-                                        <><Link to={`/art/`+item.id}>
-                                          <img className={style.thumbnail} src={item.image.url} alt=""/>
+                                        <>
+                                          <Link to={`/art/`+item.id}>
+                                            <img className={style.thumbnail} src={item.image.url} alt=""/>
                                           </Link>
                                         </>
                                     )

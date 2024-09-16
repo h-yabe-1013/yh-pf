@@ -66,12 +66,11 @@
         @media screen and (max-width: 960px){
             .img-list{
                 display: grid;
-                
+                grid-template-columns: 1fr 1fr;
                 .thumbnail {
                     display: inline-block;
-                    margin: 0.5rem;
-                    width: 130px;
-                    height: 130px;
+                    width: 40vw;
+                    height: 40vw;
                     object-fit: cover;
                     box-shadow: 7px 9px 15px -10px #777777;
                     border-radius: 10px;
