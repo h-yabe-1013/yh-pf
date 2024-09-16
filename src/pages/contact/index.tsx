@@ -1,4 +1,4 @@
-import { ListTitle } from "@/components/parts/listTitle/ListTitle"
+// import { ListTitle } from "@/components/parts/listTitle/ListTitle"
 import style from "./style.module.scss"
 
 export const Contact=()=>{
